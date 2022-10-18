@@ -55,3 +55,30 @@ class Favorites(Base):
 
 ## Draw from SQLAlchemy base
 render_er(Base, 'diagram.png')
+
+# class User(Base):
+#     id = Column(Integer, primary_key=True)
+#     username = Column(String(250), nullable=True)
+#     name = Column(String(250), nullable=True)
+#     lastname = Column(String(250), nullable=True)
+#     password = Column(String(250), nullable=False)
+#     email = Column(String(250), nullable=False)
+#     favorites = relationship('Favorites', backref='user', lazy=True)
+
+# class Planet(Base):
+#     id = Column(Integer, primary_key=True)
+#     name = Column(String(250))
+#     planet = relationship('Favorites', backref='planet', lazy=True)
+
+
+# class Character(Base):
+#     id = Column(Integer, primary_key=True)
+#     name = Column(String(250))
+#     character = relationship('Favorites', backref='character', lazy=True)
+
+
+# class Favorites(Base):
+#     id = Column(Integer, primary_key=True)
+#     id_user = Column(Integer,  ForeignKey('user.id'), nullable=False )
+#     id_planet = Column(Integer, ForeignKey('planet.id') , nullable=True)
+#     id_character = Column(Integer, ForeignKey('character.id'), nullable=True)
